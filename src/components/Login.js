@@ -41,7 +41,7 @@ const Login = () => {
         await auth.signInWithEmailAndPassword(email.value, password.value);
       } catch (error) {
         alert("Error: either email or password is incorrect");
-        // console.log("Error (Logging In):", error);
+        console.log("Error (Logging In):", error);
       }
     }
   };

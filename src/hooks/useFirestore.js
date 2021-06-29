@@ -7,8 +7,6 @@ const useFirestore = (collection) => {
   const [docs, setDocs] = useState([]);
 
   useEffect(() => {
-    console.log("Hello" ,process.env);
-
     const unsubscribe = firestore
       .collection(`users/${user.uid}/${collection}`)
       .orderBy("createdAt", "desc")
