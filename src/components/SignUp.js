@@ -27,14 +27,9 @@ const SignUp = () => {
     const password = e.target.elements[1];
 
     try {
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email.value,
-        password.value
-      );
-      console.log("User:", user);
+      await auth.createUserWithEmailAndPassword(email.value, password.value);
     } catch (error) {
-      alert("error");
-      console.log("Error:", error);
+      alert(`Error: ${error.message}`);
     }
   };
 
@@ -43,7 +38,7 @@ const SignUp = () => {
       <Grid>
         <Paper elevation={10} style={paperStyle} className="login">
           <Grid align="center">
-            <Avatar style={avatarStyle}>{/* <LockIcon /> */}</Avatar>
+            <Avatar style={avatarStyle}></Avatar>
             <h2>Sign Up</h2>
           </Grid>
           <TextField

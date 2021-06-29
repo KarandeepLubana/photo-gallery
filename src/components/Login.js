@@ -40,8 +40,7 @@ const Login = () => {
       try {
         await auth.signInWithEmailAndPassword(email.value, password.value);
       } catch (error) {
-        alert("Error: either email or password is incorrect");
-        console.log("Error (Logging In):", error);
+        alert(`Error: ${error.message}`);
       }
     }
   };
@@ -92,39 +91,5 @@ const Login = () => {
     </form>
   );
 };
-
-// const Login = () => {
-//   const handleLogin = async (e) => {
-//     e.preventDefault();
-//     console.log(e.target.elements);
-//     const { email, password } = e.target.elements;
-
-//     if (email.value && password.value) {
-//       try {
-//         await auth.signInWithEmailAndPassword(email.value, password.value);
-//       } catch (error) {
-//         alert("error");
-//         console.log("Error (Logging In):", error);
-//       }
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <form className="sign-up" onSubmit={handleLogin}>
-//         <h2>Login</h2>
-//         <label>
-//           Email
-//           <input type="email" name="email" placeholder="Email" />
-//         </label>
-//         <label>
-//           Password
-//           <input type="password" name="password" placeholder="Password" />
-//         </label>
-//         <button type="submit">Login</button>
-//       </form>
-//     </div>
-//   );
-// };
 
 export default Login;
