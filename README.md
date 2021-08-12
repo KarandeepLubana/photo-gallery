@@ -1,3 +1,10 @@
+# Photo Gallery
+A photo-gallery application built in React that allows users to safely upload images on the cloud storage. The application utilizes User-Authenitication provided from firebase to allow users to login/sign-up into their accounts to view their uploaded images. In order to store the images, the application uses Firbase NoSQL DB to persist storage. The front-end was designed using React Material-UI library and React Framer Motion library for smooth user experience.
+You can view it here: https://photogallerystore.netlify.app
+
+<br/>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
